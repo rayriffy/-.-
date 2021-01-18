@@ -11,13 +11,17 @@ interface Props {
 }
 
 export const HeadTitle: React.FC<Props> = props => {
-  const { title, description = 'Next Tailwind template', children } = props
+  const {
+    title,
+    description = '「こんにちは、リッフィーです。」',
+    children,
+  } = props
 
   const router = useRouter()
   const { dispatch } = useStoreon('title')
 
   const transformedTitle = useMemo(
-    () => (title ? `${title} · Next Tailwind UI` : 'Next Tailwind UI'),
+    () => (title ? `${title} · リッフィー.みんな` : 'リッフィー.みんな'),
     [title]
   )
 
@@ -40,12 +44,6 @@ export const HeadTitle: React.FC<Props> = props => {
       <meta property="twitter:url" content={router.asPath} />
       <meta property="twitter:title" content={transformedTitle} />
       <meta property="twitter:description" content={description} />
-
-      <link
-        rel="stylesheet"
-        href="https://rsms.me/inter/inter.css"
-        media="screen,print"
-      />
 
       {children}
     </Head>

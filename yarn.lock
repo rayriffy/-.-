@@ -1299,6 +1299,11 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/resize-observer-browser@^0.1.2":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@types/resize-observer-browser/-/resize-observer-browser-0.1.5.tgz#36d897708172ac2380cd486da7a3daf1161c1e23"
+  integrity sha512-8k/67Z95Goa6Lznuykxkfhq9YU3l1Qe6LNZmwde1u7802a3x8v44oq0j91DICclxatTr0rNnhXx7+VTIetSrSQ==
+
 "@types/resolve@0.0.8":
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-0.0.8.tgz#f26074d238e02659e323ce1a13d041eee280e194"
@@ -6728,6 +6733,13 @@ watchpack@^1.7.4:
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
+
+web-api-hooks@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/web-api-hooks/-/web-api-hooks-3.0.2.tgz#498bf290ab97300b7eb47a2f767ff1741768a8f0"
+  integrity sha512-EQEGcHo1+FVINg5spKw05lBiN1/LhRK/K2xKnUmuLsLzz4sQK8Bk8qhj4RUgsh4LA7XXZqgJ43aQI+nvtMmIqA==
+  dependencies:
+    "@types/resize-observer-browser" "^0.1.2"
 
 webidl-conversions@^4.0.2:
   version "4.0.2"

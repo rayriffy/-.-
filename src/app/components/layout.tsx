@@ -1,16 +1,11 @@
-import { FunctionComponent, Fragment } from 'react'
-
-import { Footer } from './footer'
-import { ServiceWorker } from './serviceWorker'
+import { FunctionComponent } from 'react'
 
 export const AppLayout: FunctionComponent = props => {
   const { children } = props
 
   return (
-    <Fragment>
-      <main className="bg-gray-50 min-h-screen">{children}</main>
-      <Footer />
-      <ServiceWorker />
-    </Fragment>
+    <main className="bg-gray-50 min-h-screen relative overflow-hidden">
+      {children}
+    </main>
   )
 }
