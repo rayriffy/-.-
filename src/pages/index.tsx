@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import { NextPage } from 'next'
 
@@ -43,12 +43,19 @@ const Page: NextPage = props => {
     setFigures(res.data)
   }
 
+  const mounted = useRef(false)
   useEffect(() => {
     const delay = 500
 
     const handler = setTimeout(() => {
       handleRender(width, height)
     }, delay)
+
+    if (!mounted.current) {
+      clearTimeout(handler)
+      handleRender(width, height)
+      mounted.current = true
+    }
 
     return () => clearTimeout(handler)
   }, [width, height])
