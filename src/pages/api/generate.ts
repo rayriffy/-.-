@@ -35,8 +35,8 @@ const api: NextApiHandler = async (req, res) => {
           height: targetFigure.height,
         },
         position: {
-          width: random(0, width),
-          height: random(0, height),
+          width: random(-150, width + 100),
+          height: random(-200, height + 100),
         },
       }
     })

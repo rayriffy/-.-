@@ -54,7 +54,7 @@ const Page: NextPage = props => {
   }, [width, height])
 
   return (
-    <React.Fragment>
+    <main className="bg-gray-50 h-full relative overflow-hidden">
       {figures.map(figure => (
         <img
           key={`figure-${figure.id}`}
@@ -68,7 +68,7 @@ const Page: NextPage = props => {
           }}
         />
       ))}
-    </React.Fragment>
+    </main>
   )
 }
 
