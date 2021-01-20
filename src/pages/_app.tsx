@@ -14,7 +14,7 @@ const NextApp: NextPage<AppProps> = props => {
   return (
     <Context>
       <Head>
-        <title>"リッフィー.みんな"</title>
+        <title>リッフィー.みんな</title>
         <meta name="title" content="リッフィー.みんな" />
         <meta name="description" content="「こんにちは、リッフィーです。」" />
 
