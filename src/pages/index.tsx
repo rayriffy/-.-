@@ -63,8 +63,8 @@ const Page: NextPage = props => {
           height="auto"
           style={{
             position: 'absolute',
-            left: figure.position.width - 150,
-            top: figure.position.height - 200,
+            left: figure.position.width,
+            top: figure.position.height,
           }}
         />
       ))}
