@@ -76,10 +76,10 @@ const Page: NextPage<Props> = props => {
         <img
           key={`figure-intitial-${intitialRiffy.id}`}
           src={`/static/${intitialRiffy.file}`}
-          width={`${Math.floor(intitialRiffy.image.width / 2)}`}
+          width="250px"
           height="auto"
         />
-        {figures.map(figure => (
+        {[].map(figure => (
           <img
             key={`figure-${figure.id}`}
             src={`/static/${figure.file}`}
