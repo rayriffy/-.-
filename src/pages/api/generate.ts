@@ -17,7 +17,7 @@ const api: NextApiHandler = async (req, res) => {
       figures.reduce((acc, val) => acc + val.height, 0) / figures.length
 
     // specify density
-    const density = 10
+    const density = 12
 
     // calculate amount of riffy needed to fill screen
     const amountOfRiffy =
