@@ -24,7 +24,7 @@ interface GeneratedFigure {
 }
 
 interface Props {
-  intitialRiffy: GeneratedFigure
+  intitialRiffy: string
 }
 
 const Page: NextPage<Props> = props => {
@@ -70,16 +70,11 @@ const Page: NextPage<Props> = props => {
   return (
     <React.Fragment>
       <Head>
-        <link rel="preload" as="image" href={`/static/${intitialRiffy.file}`} />
+        <link rel="preload" as="image" href={`/static/${intitialRiffy}`} />
       </Head>
       <main className="bg-gray-50 h-full relative overflow-hidden flex justify-center items-center">
-        <img
-          key={`figure-intitial-${intitialRiffy.id}`}
-          src={`/static/${intitialRiffy.file}`}
-          width="250px"
-          height="auto"
-        />
-        {[].map(figure => (
+        <img src={`/static/${intitialRiffy}`} width="250px" height="auto" />
+        {figures.map(figure => (
           <img
             key={`figure-${figure.id}`}
             src={`/static/${figure.file}`}
@@ -106,14 +101,7 @@ export const getServerSideProps: GetStaticProps<Props> = async context => {
 
   return {
     props: {
-      intitialRiffy: {
-        id: nanoid(),
-        file: targetFigure.file,
-        image: {
-          width: targetFigure.width,
-          height: targetFigure.height,
-        },
-      },
+      intitialRiffy: targetFigure.file,
     },
   }
 }
